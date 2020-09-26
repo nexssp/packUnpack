@@ -3,11 +3,16 @@ const { pack, unpack } = require('../src/');
 const file = 'mypackXX1.tar.gz';
 const whatToPack = ['G:\\111222333', 'G:/5/1234'];
 console.log(`what to pack: ${whatToPack.join(', ')}`);
+
+console.log('Packing (without passing archive name)..');
+pack(whatToPack, null, { force: true });
+console.log(`\u001b[32mdone.\u001b[0m`);
+
 console.log('Packing..');
 const packResults = pack(whatToPack, file, { force: true });
 // packResults { ommited, packed, file, includes: what, size, sizeMB }
 
-console.log(packResults);
+console.log(`\u001b[32mdone.\u001b[0m`);
 if (packResults) {
   if (packResults.packed) {
     console.log(`\u001b[34;1mPacked files: \u001b[0m`);

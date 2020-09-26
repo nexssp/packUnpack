@@ -68,10 +68,11 @@ function pack(what, file, opts = { gitignore: true }) {
   }
 
   if (!file) {
-    throw new Error(`Put the second parameter as a filename for the pack eg. mySuperPack.tar.gz.`);
+    file = require('path').basename(what[0]) + '.tar.gz';
+    // throw new Error(`Put the second parameter as a filename for the pack eg. mySuperPack.tar.gz.`);
   }
 
-  if (!ctx.existsSync(file) && !opts.force) {
+  if (ctx.existsSync(file) && !opts.force) {
     throw new Error(`file exists: ${file} You can use opts.force=true.`);
   } else {
     // We find gitignore, or the very first in the parent
