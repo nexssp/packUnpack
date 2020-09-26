@@ -80,11 +80,17 @@ function pack(what, file, opts = { gitignore: true }) {
       ommited = [];
     const filter = (p, stat) => {
       let ig;
+      const org = p;
       if (!gitIgnoreFilePaths[p]) {
         gitIgnoreFilePaths[p] = ctx.findParent('.gitignore', ctx.path.dirname(p));
+        if (!gitIgnoreFilePaths[p]) {
+          // no gitignore
+          packed.push(org);
+          return true;
+        }
         ig = ctx.ignore().add(ctx.readFileSync(gitIgnoreFilePaths[p]).toString());
       }
-      const org = p;
+
       // relative? hmm
       if (p.indexOf(':') > -1) {
         p = p.split(':')[1].substring(1);
