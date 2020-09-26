@@ -38,11 +38,11 @@ const packReturnsExample = {
   ],
   packed: [
     'G:\\111222333',
-    'G:\\111222333/.gitignore',
-    'G:\\111222333/BBB.ign',
+    'G:\\111222333\\.gitignore',
+    'G:\\111222333\\BBB.ign',
     '.........',
-    'G:/5/1234/stdinTest.js',
-    'G:/5/1234/xxxx.hs',
+    'G:\\5\\1234\\stdinTest.js',
+    'G:\\5\\1234\\xxxx.hs',
   ],
   file: '../../mypackXX1.tar.gz', // Result packed file
   includes: ['G:\\111222333', 'G:/5/1234'], // What was selected for packing
