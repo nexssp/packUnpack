@@ -1,6 +1,6 @@
 {
-  "name": "@nexssp/packUnpack",
-  "version": "1.0.2",
+  "name": "@nexssp/packunpack",
+  "version": "1.0.3",
   "description": "Just Pack or Unpack files and folders",
   "main": "src/index.js",
   "keywords": [
