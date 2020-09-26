@@ -1,13 +1,14 @@
 {
   "name": "@nexssp/packunpack",
-  "version": "1.0.3",
-  "description": "Just Pack or Unpack files and folders",
+  "version": "1.0.4",
+  "description": "Just Pack or Unpack files and folders (+.gitignore rules)",
   "main": "src/index.js",
   "keywords": [
     "pack",
     "compress",
     "unpack",
     "uncompress",
+    "gitignore",
     "gzip",
     "tar"
   ],
